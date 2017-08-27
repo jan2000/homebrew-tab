@@ -1,4 +1,4 @@
-class AppStreamGlib < Formula
+class AppstreamGlib < Formula
   homepage "https://github.com/hughsie/appstream-glib"
   url "https://github.com/hughsie/appstream-glib/archive/appstream_glib_0_7_2.tar.gz"
   sha256 "80231ffc8db3a470722a5ceb85c933260649636d3a4355b075a76e6c8803b5ba"
