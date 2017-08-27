@@ -11,7 +11,7 @@ class AppstreamGlib < Formula
   depends_on "gtk-doc" => :build
   depends_on "gobject-introspection" => :build
   depends_on "rpm" => :build
-  depends_on "gtk3" => :build
+  depends_on "gtk+3" => :build
   depends_on "sqlite" => :build
   depends_on "libsoup" => :build
   depends_on "gettext" => :build
