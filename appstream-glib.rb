@@ -24,6 +24,7 @@ class AppstreamGlib < Formula
   depends_on "json-glib" => :build
   depends_on "gdk-pixbuf" => :build
   depends_on "libpng" => :build
+  depends_on "pango" => :build
 
   def install
     system "./configure", "--prefix=#{prefix}"
