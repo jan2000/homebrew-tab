@@ -21,6 +21,7 @@ class AppstreamGlib < Formula
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "ossp-uuid" => :build
+  depends_on "json-glib" => :build
 
   def install
     system "./configure", "--prefix=#{prefix}"
