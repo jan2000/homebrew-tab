@@ -35,6 +35,7 @@ class AppstreamGlib < Formula
   depends_on "atk" => :build
   depends_on "gcab" => :build
   depends_on "gobject-introspection" => :build
+  depends_on "libffi" => :build
 
   def install
     system "./configure", "--prefix=#{prefix}", "--disable-stemmer"
