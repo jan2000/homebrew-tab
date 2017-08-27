@@ -36,7 +36,7 @@ class AppstreamGlib < Formula
   depends_on "gcab" => :build
 
   def install
-    system "./configure", "--prefix=#{prefix}"
+    system "./configure", "--prefix=#{prefix}", "--disable-stemmer"
     system "make", "install"
   end
 end
