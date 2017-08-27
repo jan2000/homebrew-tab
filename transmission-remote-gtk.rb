@@ -7,6 +7,7 @@ class TransmissionRemoteGtk < Formula
   depends_on "intltool" => :build
   depends_on "pkg-config" => :build
   depends_on "automake" => :build
+  depends_on "autoconf" => :build
   depends_on "gtk+3"
   depends_on "json-glib"
 
