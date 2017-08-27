@@ -30,6 +30,7 @@ class AppstreamGlib < Formula
   depends_on "fontconfig" => :build
   depends_on "freetype" => :build
   depends_on "harfbuzz" => :build
+  depends_on "graphite2" => :build
 
   def install
     system "./configure", "--prefix=#{prefix}"
