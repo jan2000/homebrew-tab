@@ -31,6 +31,7 @@ class AppstreamGlib < Formula
   depends_on "freetype" => :build
   depends_on "harfbuzz" => :build
   depends_on "graphite2" => :build
+  depends_on "libepoxy" => :build
 
   def install
     system "./configure", "--prefix=#{prefix}"
