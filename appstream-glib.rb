@@ -17,6 +17,7 @@ class AppstreamGlib < Formula
   depends_on "gettext" => :build
   depends_on "libarchive" => :build
   depends_on "libyaml" => :build
+  depends_on "meson" => :build
 
   def install
     system "./configure", "--prefix=#{prefix}"
