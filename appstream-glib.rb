@@ -38,7 +38,7 @@ class AppstreamGlib < Formula
   depends_on "libffi" => :build
 
   def install
-    system "./configure", "--prefix=#{prefix}", "--disable-stemmer"
+    system "./configure", "--prefix=#{prefix}", "--disable-stemmer", "--disable-gtk-doc"
     system "make", "install"
   end
 end
