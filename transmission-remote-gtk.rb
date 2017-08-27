@@ -10,6 +10,7 @@ class TransmissionRemoteGtk < Formula
   depends_on "json-glib"
 
   def install
+    system "./autogen.sh"
     system "./configure", "--prefix=#{prefix}", "--enable-gtk3"
     system "make", "install"
   end
