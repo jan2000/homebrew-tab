@@ -23,6 +23,7 @@ class AppstreamGlib < Formula
   depends_on "ossp-uuid" => :build
   depends_on "json-glib" => :build
   depends_on "gdk-pixbuf" => :build
+  depends_on "libpng" => :build
 
   def install
     system "./configure", "--prefix=#{prefix}"
