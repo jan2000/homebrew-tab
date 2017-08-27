@@ -28,6 +28,7 @@ class AppstreamGlib < Formula
   depends_on "cairo" => :build
   depends_on "pixman" => :build
   depends_on "fontconfig" => :build
+  depends_on "freetype" => :build
 
   def install
     system "./configure", "--prefix=#{prefix}"
