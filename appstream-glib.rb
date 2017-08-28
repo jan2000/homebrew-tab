@@ -8,6 +8,7 @@ class AppstreamGlib < Formula
   depends_on "libtool" => :build
   depends_on "glib" => :build
   depends_on "docbook" => :build
+  depends_on "docbook-xsl" => :build
   depends_on "gtk-doc" => :build
   depends_on "gobject-introspection" => :build
   depends_on "rpm" => :build
