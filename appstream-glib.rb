@@ -40,6 +40,7 @@ class AppstreamGlib < Formula
 
   def install
     system "./configure", "--prefix=#{prefix}", "--disable-stemmer", "--disable-gtk-doc"
+    system "make"
     system "make", "install"
   end
 end
