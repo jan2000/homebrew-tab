@@ -39,6 +39,8 @@ class AppstreamGlib < Formula
   depends_on "libffi" => :build
 
   def install
+    ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
+
     system "./configure", "--prefix=#{prefix}", "--disable-stemmer", "--disable-gtk-doc"
     system "make"
     system "make", "install"
