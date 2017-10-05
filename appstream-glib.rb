@@ -10,8 +10,7 @@ class AppstreamGlib < Formula
   depends_on "docbook" => :build
   depends_on "docbook-xsl" => :build
   depends_on "gtk-doc" => :build
-  depends_on "gobject-introspection" => :build
-  depends_on "rpm" => :build
+  #depends_on "rpm" => :build
   depends_on "gtk+3" => :build
   depends_on "sqlite" => :build
   depends_on "libsoup" => :build
@@ -21,7 +20,7 @@ class AppstreamGlib < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
-  depends_on "ossp-uuid" => :build
+  #depends_on "ossp-uuid" => :build
   depends_on "json-glib" => :build
   depends_on "gdk-pixbuf" => :build
   depends_on "libpng" => :build
@@ -40,8 +39,10 @@ class AppstreamGlib < Formula
 
   def install
     ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
+    ENV["UUID_CFLAGS"] = "-iwithsysroot /usr/include/uuid"
+    ENV["UUID_LIBS"] = " "
 
-    system "./configure", "--prefix=#{prefix}", "--disable-stemmer", "--disable-gtk-doc"
+    system "./configure", "--prefix=#{prefix}", "--disable-stemmer", "--disable-gtk-doc", "--disable-rpm", "--disable-silent-rules"
     system "make"
     system "make", "install"
   end
