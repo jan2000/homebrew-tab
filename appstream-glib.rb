@@ -1,7 +1,9 @@
 class AppstreamGlib < Formula
   homepage "https://github.com/hughsie/appstream-glib"
-  url "https://github.com/hughsie/appstream-glib/archive/appstream_glib_0_7_2.tar.gz"
-  sha256 "80231ffc8db3a470722a5ceb85c933260649636d3a4355b075a76e6c8803b5ba"
+  #url "https://github.com/hughsie/appstream-glib/archive/appstream_glib_0_7_2.tar.gz"
+  #sha256 "80231ffc8db3a470722a5ceb85c933260649636d3a4355b075a76e6c8803b5ba"
+  url "https://github.com/hughsie/appstream-glib/archive/appstream_glib_0_6_13.tar.gz"
+  sha256 "4114f51ab2aa88c512b236973682518c5916563e19f08a8aeaa7e227604e9f05"
 
   depends_on "automake" => :build
   depends_on "autoconf" => :build
@@ -42,7 +44,7 @@ class AppstreamGlib < Formula
     ENV["UUID_CFLAGS"] = "-iwithsysroot /usr/include/uuid"
     ENV["UUID_LIBS"] = " "
 
-    system "./configure", "--prefix=#{prefix}", "--disable-stemmer", "--disable-gtk-doc", "--disable-rpm", "--disable-silent-rules"
+    system "./autogen.sh", "--prefix=#{prefix}", "--disable-stemmer", "--disable-gtk-doc", "--disable-rpm", "--disable-silent-rules"
     system "make"
     system "make", "install"
   end
