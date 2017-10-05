@@ -21,7 +21,7 @@ class AppstreamGlib < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
-  # depends_on "ossp-uuid" => :build
+  depends_on "ossp-uuid" => :build
   depends_on "json-glib" => :build
   depends_on "gdk-pixbuf" => :build
   depends_on "libpng" => :build
