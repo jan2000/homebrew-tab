@@ -12,6 +12,7 @@ class TransmissionRemoteGtk < Formula
   depends_on "appstream-glib" => :build
   depends_on "gtk+3"
   depends_on "json-glib"
+  depends_on "libtool" => :build
 
   def install
     system "./autogen.sh"
