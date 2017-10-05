@@ -15,6 +15,7 @@ class TransmissionRemoteGtk < Formula
   depends_on "libtool" => :build
 
   def install
+    system "alias", "libtoolize=glibtoolize""
     system "./autogen.sh"
     system "./configure", "--prefix=#{prefix}", "--enable-gtk3"
     system "make", "install"
